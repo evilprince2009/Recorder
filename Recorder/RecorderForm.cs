@@ -1,8 +1,5 @@
 ﻿using NAudio.Wave;
-using System;
 using System.Diagnostics;
-using System.IO;
-using System.Windows.Forms;
 
 namespace Recorder
 {
@@ -75,8 +72,7 @@ namespace Recorder
             StopButton.Enabled = false;
             wave.StopRecording();
 
-            if (outputFileName == null)
-                return;
+            if (outputFileName == null) return;
 
             var processStartInfo = new ProcessStartInfo
             {
